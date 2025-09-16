@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Happy Birthday!</title>
+</head>
+
+<body>
+    <div class="faixa">
+        <h1 class="texto">Feliz aniversário meu amor!
+            <span>21/11 - Eu te amo muito</span>
+        </h1>
+
+        <div class="hearts">
+            <span>❤️</span>
+            <span>❤️</span>
+            <span>❤️</span>
+            <span>❤️</span>
+            <span>❤️</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <img src="assets/images/Image.jpg" alt="Imagem 1">
+            <div class="hidden-text">
+                Feliz aniversário meu amor, desejo tudo sempre do melhor pra você. <br>
+                Esse ano você completa seus 18 anos, e eu fico muito feliz de estar do seu lado presenciando esse
+                momento único; Saiba que sempre vai poder contar comigo pra tudo.
+            </div>
+            <button>Clique</button>
+        </div>
+        <div class="card">
+            <img src="assets/images/Image (2).jpg" alt="Imagem 2">
+            <div class="hidden-text">
+                Eu sempre vou estar aqui pra você, tanto nos momentos bons como nos momentos ruins e de
+                dificuldades. Nunca se esqueça que
+                sempre vou estar aqui te apoiando e torcendo por você pra você realizar seus sonhos, você é meu bem mais
+                precioso, o amor da minha vida, o pai dos meus filhos.
+            </div>
+            <button>Clique</button>
+        </div>
+        <div class="card">
+            <img src="assets/images/Image (1).jpg" alt="Imagem 3">
+            <div class="hidden-text">
+                Que o seu dia seja maravilhoso como você e pra mim, e quero fazer parte cada vez mais da sua jornada da
+                vida. <br>
+                Eu te amo pra todo o sempre.
+            </div>
+            <button>Clique</button>
+        </div>
+    </div>
+
+    <script>
+        // Seleciona todos os botões
+        const buttons = document.querySelectorAll('.card button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.parentElement;
+                card.classList.toggle('expanded'); // adiciona ou remove a classe 'expanded'
+            });
+        });
+    </script>
+
+    <div class="pe">
+        <h1 class="baixo">
+            Com muito amor e carinho,
+            <span>Liz.</span>
+        </h1>
+        
+         <div class="hearts">
+            <span>❤️</span>
+            <span>❤️</span>
+            <span>❤️</span>
+            <span>❤️</span>
+            <span>❤️</span>
+        </div>
+    </div>
+</body>
+</html>

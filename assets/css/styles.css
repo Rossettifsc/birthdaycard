@@ -1,0 +1,189 @@
+.faixa {
+  height: 200px;
+  width: absolute;
+  display: flex;
+  align-items: center;
+  background-color: #892828;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.faixa h1 {
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 2;
+  color: #4a0000;
+}
+
+h1 span {
+  display: block;
+  font-size: smaller;
+  margin-top: 10px;
+  font-weight: normal;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+h1 span:hover {
+  color: #ffbcbc;
+  transform: scale(1.1);
+}
+
+h1 span:active {
+  animation: pulse 0.3s ease;
+}
+
+.hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hearts span {
+  position: absolute;
+  bottom: -20px;
+  font-size: 20px;
+  animation: subir 6s linear infinite;
+  opacity: 0.7;
+}
+
+.hearts span:nth-child(1) {
+  left: 10%;
+  animation-duration: 5s;
+  font-size: 22px;
+}
+
+.hearts span:nth-child(2) {
+  left: 30%;
+  animation-duration: 7s;
+  font-size: 18px;
+}
+
+.hearts span:nth-child(3) {
+  left: 50%;
+  animation-duration: 6s;
+  font-size: 24px;
+}
+
+.hearts span:nth-child(4) {
+  left: 70%;
+  animation-duration: 8s;
+  font-size: 20px;
+}
+
+.hearts span:nth-child(5) {
+  left: 90%;
+  animation-duration: 5.5s;
+  font-size: 26px;
+}
+
+@keyframes subir {
+  0% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-220px);
+    opacity: 0;
+  }
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #892828;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 350px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: #ff6b81;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #ff4757;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .hidden-text {
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  color: #fff;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.card.expanded {
+  height: auto;
+  /* altura maior quando expandida */
+}
+
+.card.expanded .hidden-text {
+  opacity: 1;
+  max-height: 200px;
+}
+
+.card:hover {
+  transform: scale(1.05) translateY(-5px);
+  /* aumenta levemente e sobe */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  /* sombra maior */
+}
+
+.pe {
+  height: 200px;
+  width: absolute;
+  display: flex;
+  align-items: center;
+  background-color: #892828;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 28px;
+}
+
+.pe h1 {
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 2;
+  color: #4a0000;
+}
