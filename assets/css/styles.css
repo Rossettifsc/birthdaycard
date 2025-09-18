@@ -1,6 +1,6 @@
 .faixa {
   height: 200px;
-  width: absolute;
+  width: 100%;
   display: flex;
   align-items: center;
   background-color: #892828;
@@ -108,6 +108,7 @@ body {
   justify-content: center;
   gap: 20px;
   margin-top: 30px;
+  flex-wrap: wrap; /* já ajuda no mobile */
 }
 
 .card {
@@ -154,7 +155,6 @@ body {
 
 .card.expanded {
   height: auto;
-  /* altura maior quando expandida */
 }
 
 .card.expanded .hidden-text {
@@ -164,14 +164,12 @@ body {
 
 .card:hover {
   transform: scale(1.05) translateY(-5px);
-  /* aumenta levemente e sobe */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  /* sombra maior */
 }
 
 .pe {
   height: 200px;
-  width: absolute;
+  width: 100%;
   display: flex;
   align-items: center;
   background-color: #892828;
@@ -186,4 +184,51 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   z-index: 2;
   color: #4a0000;
+}
+
+/* ============================= */
+/* MEDIA QUERIES RESPONSIVAS */
+/* ============================= */
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+  .faixa, .pe {
+    height: 150px;
+  }
+
+  .faixa h1, .pe h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .container {
+    gap: 15px;
+  }
+
+  .card {
+    width: 160px;
+    height: auto;
+  }
+}
+
+/* Celulares (até 480px) */
+@media (max-width: 480px) {
+  .faixa, .pe {
+    height: 120px;
+  }
+
+  .faixa h1, .pe h1 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 300px;
+  }
 }
